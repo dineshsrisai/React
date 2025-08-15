@@ -1,21 +1,32 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+
 const parent = React.createElement(
-    "div",
-    {id:"parent"},
-    [
+  "div",
+  { id: "parent" },
+  [
     React.createElement(
-    "div",
-    {id:"child"},
-        [React.createElement("h1",{},"I'm an h1 tag"),
-        React.createElement("h2",{},"I'm an h2 tag")]
+      "div",
+      { id: "child", key: "child1" },
+      [
+        React.createElement("h1", { key: "h1-1" }, "I'm Dinesh Sri Sai"),
+        React.createElement("h2", { key: "h2-1" }, "I'm an SRKREC Student")
+      ]
     ),
     React.createElement(
-    "div",
-    {id:"child2"},
-        [React.createElement("h1",{},"I'm an h1 tag"),
-        React.createElement("h2",{},"I'm an h2 tag")]
+      "div",
+      { id: "child2", key: "child2" },
+      [
+        React.createElement("h1", { key: "h1-2" }, "I'm an AI&DS Student"),
+        React.createElement("h2", { key: "h2-2" }, "I'm an Good Student")
+      ]
     )
-    ]
-)
+  ]
+);
+
 
 
 // const heading = React.createElement(
@@ -25,7 +36,6 @@ const parent = React.createElement(
 
 // console.log(heading); //object
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // root.render(heading);
 

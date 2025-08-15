@@ -1,0 +1,32 @@
+{
+  "name": "namastereact",
+  "version": "1.0.0",
+  "description": "Learning React",
+  "keywords": [
+    "react"
+  ],
+  "homepage": "https://github.com/dineshsrisai/React#readme",
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  },
+  "bugs": {
+    "url": "https://github.com/dineshsrisai/React/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dineshsrisai/React.git"
+  },
+  "license": "ISC",
+  "author": "Dinesh",
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserslist":[
+    "last 2 versions"
+  ]
+}
