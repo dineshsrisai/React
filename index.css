@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #f0f0f0;
+}
+
+.image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.search-and-user {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Adds space between the icons */
+    font-size: 1.5rem;
+}
+
+#logo {
+    color: blueviolet;
+}
+
+/* You can remove the #heading and #logo styles you had before.
+   The flexbox layout and new CSS handles the spacing. */
