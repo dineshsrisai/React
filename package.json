@@ -1,0 +1,23 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/dineshsrisai/react#readme",
+  "bugs": {
+    "url": "https://github.com/dineshsrisai/react/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dineshsrisai/react.git"
+  },
+  "license": "ISC",
+  "author": "Dinesh sri sai",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.3"
+  }
+}
