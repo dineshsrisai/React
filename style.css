@@ -1,3 +1,7 @@
-#heading {
-  color: red;
+/* #h1tag {
+  color: rgba(0, 52, 223, 0.662);
+} */
+
+.heading {
+  color: rgba(0, 52, 223, 0.662);
 }
