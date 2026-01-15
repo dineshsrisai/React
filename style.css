@@ -50,11 +50,11 @@
   background-color: rgba(252, 128, 25, 0.1);
 }
 
-.search {
-  padding: 16px 32px;
+.filter-btn {
+  margin: 10px;
 }
 
-.search input {
+/* .search input {
   width: 100%;
   max-width: 300px;
   padding: 10px 14px;
@@ -65,7 +65,7 @@
 
 .search input:focus {
   border-color: #fc8019;
-}
+} */
 
 .res-card {
   width: 220px;
