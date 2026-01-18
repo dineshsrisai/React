@@ -168,3 +168,51 @@ body {
 .login:hover {
   background-color: #e76f0f;
 }
+
+.filter {
+  display: flex;
+  margin-left: 18px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px;
+}
+
+.search-box {
+  padding: 8px 14px;
+  width: 220px;
+  border-radius: 6px;
+  border: 1px solid #e5e5e5;
+  font-size: 16px;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.search-box:focus {
+  border-color: #fc8019;
+  box-shadow: 0 0 0 2px rgba(252, 128, 25, 0.2);
+}
+
+.search-box::placeholder {
+  color: #999;
+}
+
+.search button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: #fc8019;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search button:hover {
+  background-color: #e76f0f;
+}
