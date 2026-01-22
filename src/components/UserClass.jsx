@@ -1,4 +1,5 @@
-class UserClass extends React.Component {
+import { Component } from "react";
+class UserClass extends Component {
   constructor(props) {
     super(props);
     this.state = {
