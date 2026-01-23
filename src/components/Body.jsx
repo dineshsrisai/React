@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
-import ResCard from "./ResCard";
+import ResCard, { withPromotedLabel } from "./ResCard";
 import Shimmer from "./Shimmer";
-import useOnlineStatus from "../utils/useOnlineStatus";
 import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
+
+  const ResCardPromoted = withPromotedLabel(ResCard);
+
+  console.log(listOfRestaurants);
 
   useEffect(() => {
     fetchData();
@@ -74,9 +77,13 @@ const Body = () => {
         </button>
       </div>
       <div className="res-container">
-        {filteredRestaurants.map((restaurant) => (
-          <ResCard key={restaurant.info.id} resData={restaurant} />
-        ))}
+        {filteredRestaurants.map((restaurant) =>
+          restaurant?.info?.avgRating >= 4.5 ? (
+            <ResCardPromoted key={restaurant.info.id} resData={restaurant} />
+          ) : (
+            <ResCard key={restaurant.info.id} resData={restaurant} />
+          ),
+        )}
       </div>
     </div>
   );

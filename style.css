@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +11,8 @@ body {
   background-color: #fafafa;
   color: #333;
 }
+
+/* ================= HEADER ================= */
 
 .header {
   display: flex;
@@ -59,9 +62,72 @@ body {
   background-color: rgba(252, 128, 25, 0.1);
 }
 
-.filter-btn {
-  margin: 12px;
+/* ================= FILTER + SEARCH ================= */
+
+.filter {
+  position: sticky;
+  top: 72px;
+  z-index: 90;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+
+  margin: 16px;
+  padding: 14px 18px;
+
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search-box {
+  padding: 8px 14px;
+  width: 260px;
+  border-radius: 6px;
+  border: 1px solid #e5e5e5;
+  font-size: 16px;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.search-box:focus {
+  border-color: #fc8019;
+  box-shadow: 0 0 0 2px rgba(252, 128, 25, 0.2);
+}
+
+.search-box::placeholder {
+  color: #999;
+}
+
+.search button {
   padding: 8px 16px;
+  height: 40px;
+  border-radius: 6px;
+  border: none;
+  background-color: #fc8019;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search button:hover {
+  background-color: #e76f0f;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  height: 40px;
   border-radius: 6px;
   border: none;
   background-color: #fc8019;
@@ -73,6 +139,8 @@ body {
 .filter-btn:hover {
   background-color: #e76f0f;
 }
+
+/* ================= RESTAURANT GRID ================= */
 
 .res-container {
   display: grid;
@@ -105,17 +173,39 @@ body {
   margin-bottom: 12px;
 }
 
-.footer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0f0f0;
-  padding: 1rem;
-  margin-top: 40px;
-  font-size: 14px;
-  color: #555;
+/* ================= PROMOTED BADGE ================= */
+
+.promoted-wrapper {
+  position: relative;
 }
+
+.promoted-label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  color: #ffffff;
+  background: linear-gradient(135deg, #ff512f, #f09819);
+
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.promoted-wrapper .res-card {
+  border: 2px solid rgba(252, 128, 25, 0.4);
+}
+
+.promoted-wrapper .res-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* ================= SHIMMER ================= */
 
 .shimmer-container {
   display: grid;
@@ -156,6 +246,22 @@ body {
   }
 }
 
+/* ================= FOOTER ================= */
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* ================= LOGIN ================= */
+
 .login {
   padding: 8px 16px;
   border-radius: 6px;
@@ -170,106 +276,46 @@ body {
   background-color: #e76f0f;
 }
 
-.filter {
-  display: flex;
-  margin-left: 16px;
-}
-
-.search {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 12px;
-}
-
-.search-box {
-  padding: 8px 14px;
-  width: 220px;
-  border-radius: 6px;
-  border: 1px solid #e5e5e5;
-  font-size: 16px;
-  outline: none;
-  transition:
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.search-box:focus {
-  border-color: #fc8019;
-  box-shadow: 0 0 0 2px rgba(252, 128, 25, 0.2);
-}
-
-.search-box::placeholder {
-  color: #999;
-}
-
-.search button {
-  padding: 8px 16px;
-  border-radius: 6px;
-  border: none;
-  background-color: #fc8019;
-  color: #fff;
-  font-size: 15px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.search button:hover {
-  background-color: #e76f0f;
-}
+/* ================= USER CARD ================= */
 
 .user-card {
   max-width: 340px;
   margin: 24px auto;
   padding: 28px;
   border-radius: 16px;
-
   background: linear-gradient(135deg, #f9fafb 0%, #e5ecf6 100%);
-
   box-shadow:
     0 10px 25px rgba(0, 0, 0, 0.12),
     0 4px 10px rgba(0, 0, 0, 0.05);
-
-  font-family:
-    "Segoe UI",
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    sans-serif;
-
   transition:
     transform 0.35s ease,
     box-shadow 0.35s ease;
-
-  will-change: transform, box-shadow;
 }
 
-.user-card:hover,
-.user-card:focus-within {
+.user-card:hover {
   transform: translateY(-6px);
   box-shadow:
     0 16px 35px rgba(0, 0, 0, 0.18),
     0 6px 15px rgba(0, 0, 0, 0.08);
 }
 
-.user-card h2 {
-  margin: 0 0 12px;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #1f2933;
-  line-height: 1.3;
-}
+/* ================= MOBILE ================= */
 
-.user-card h3 {
-  margin: 0 0 10px;
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: #374151;
-}
+@media (max-width: 640px) {
+  .filter {
+    flex-direction: column;
+    align-items: stretch;
+  }
 
-.user-card h4 {
-  margin: 0 0 20px;
-  font-size: 0.95rem;
-  font-weight: 400;
-  color: #6b7280;
+  .search {
+    width: 100%;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .filter-btn {
+    width: 100%;
+  }
 }
