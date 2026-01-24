@@ -29,5 +29,5 @@ export const withPromotedLabel = (ResCard) => {
     );
   };
 };
-
+// spread operator it will pass all the properties;
 export default ResCard;
